@@ -6,10 +6,32 @@ Eine interaktive To-Do Liste für eine Webanwendung entwickelt, um Nutzer das Hi
 
 <img src='task_ex.png'>
 
+## Setup
+Die folgenden Schritte habe ich verwendet, um die Anwendung, wie sie im Repo hinterlegt ist, lokal zum Laufen zu kriegen.
+Wenn es bessere Wege gibt, können diese natürlich verwendet werden.
+
+```bash
+# Clone Repository
+git clone https://github.com/saqr98/CC-TODO-Task.git
+
+# Move to todo app/
+cd CC-TODO-Task/todo\ app
+
+# Install package dependencies
+npm install
+
+# Build app. Alternatively, just run as developer `npm run dev`
+npm run build
+
+# Preview App
+npm run preview
+```
+
 ## Vorgehensweise
 Ausgehend von unten stehender Aufgabenstellung beschreibe ich hier kurz wie ich zum Lösen der gestellten Aufgabe vorgegangen bin. 
 
 Weil mir die Syntax des `Svelte`-Frameworks zusagte und ich die auf [Svelte](https://svelte.dev) beschriebenen Konzepte einleuchtend fand, habe ich mich dazu entschieden die Aufgabe mit diesem anzufertigen. Zum Start habe ich ein einfaches Template für eine `Svelt`-Seite verwendet. Zur besseren Nachvollziehbarkeit, hier der dafür verwendete Command.
+
 ```bash
 # Create project from template
 npm create vite@latest

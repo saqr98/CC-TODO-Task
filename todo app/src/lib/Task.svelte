@@ -63,11 +63,11 @@
     }
 
     .task-wrapper:hover {
-        cursor: pointer;
         background-color: #fff;
         opacity: 0.6;
         border-color: #fff;
         box-shadow: 0px 0px 1em #7068ffa1;
+        cursor: pointer;
     }
 
     /* ##############  CHECKBOX WRAPPER ############## */
@@ -76,23 +76,27 @@
         align-items: center;
         width: 80%;
         gap: 35px;
+        cursor: pointer;
     }
 
     .checkbox-wrapper input[type=checkbox] {
         width: 2em;
         height: 2em;
         margin: 0 0 0 .75em;
+        cursor: pointer;
     }
     
     /* ##############  TASK STYLE ############## */
     .task_open {
         font-size: 14pt;
+        cursor: pointer;
     }
     
     .task_done {
         font-size: 14pt;
         color: #275EFE;
         text-decoration: line-through;
+        cursor: pointer;
     }
 
     label {
@@ -101,6 +105,7 @@
         text-align: left;
         word-wrap: break-word;
         width: 80%;
+        cursor: pointer;
     }
 
     /* ##############  DELETE BUTTON ##############*/
