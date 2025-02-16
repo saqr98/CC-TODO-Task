@@ -32,11 +32,11 @@
 
 
 <div class="task-wrapper">
-    <div class="checkbox-wrapper" on:click={checkTask} id="task-{id}">
+    <div class="checkbox-wrapper" onclick={checkTask} id="task-{id}">
         <input class="task-checkbox" type="checkbox" id="cbx-{id}" checked={done} />
-        <label class={done ? 'task_done' : 'task_open'} >{todo}</label>
+        <label class={done ? 'task_done' : 'task_open'} for="cbx-{id}">{todo}</label>
     </div>
-    <button class="btn" on:click={deleteTask}>
+    <button class="btn" onclick={deleteTask}>
         <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 90" x="0px" y="0px">
             <path class="trash-icon" d="M80,23.5H67v-3a8,8,0,0,0-8-8H41a8,8,0,0,0-8,8v3H20a4,4,0,0,0,0,8h1.26l4.26,46.91a10,10,0,0,0,10,9.09h29a10,10,0,0,0,10-9.09L78.74,31.5H80a4,4,0,0,0,0-8Zm-39-3H59v3H41ZM66.51,77.68a2,2,0,0,1-2,1.82h-29a2,2,0,0,1-2-1.82L29.29,31.5H70.71Z"/>
          </svg>
