@@ -6,6 +6,9 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
+  /*
+  * @see {https://cssgradient.io/}
+  */
   background: #7068ff;
   background: linear-gradient(161deg, #7068ff 0%, #94bbe9 38%, #eeaeca 100%);
 
