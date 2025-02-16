@@ -17,6 +17,13 @@ git clone https://github.com/saqr98/CC-TODO-Task.git
 # Move to todo app/
 cd CC-TODO-Task/todo\ app
 
+# Run build script (requires exectuable permission)
+./script.sh
+```
+
+Alternativ können die Schritte aus dem Build-Skript auch manuell ausgeführt werden.
+
+```bash
 # Install package dependencies
 npm install
 
