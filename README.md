@@ -17,7 +17,7 @@ git clone https://github.com/saqr98/CC-TODO-Task.git
 # Move to todo app/
 cd CC-TODO-Task/todo\ app
 
-# Run build script (requires exectuable permission)
+# Run build script
 ./setup.sh
 ```
 
