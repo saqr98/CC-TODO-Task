@@ -1,6 +1,6 @@
 # CC-TODO-Task
 
-Eine interaktive To-Do Liste für eine Webanwendung entwickelt, um Nutzer das Hinzufügen, Bearbeiten, Abschließen, und Löschen von Aufgaben zu ermöglichen. Geschrieben in `TypeScript`, `HTML`, `CSS` mit Hilfe des `Svelte` Frameworks.
+Eine interaktive To-Do Liste für eine Webanwendung, um Nutzern das Hinzufügen, Bearbeiten, Abschließen, und Löschen von Aufgaben zu ermöglichen. Geschrieben in `TypeScript`, `HTML`, `CSS` mit Hilfe des `Svelte` Frameworks.
 
 *NOTIZ: Repo für die CyberCurriculum Programmieraufgabe.*
 
@@ -37,7 +37,7 @@ npm run preview
 ## Vorgehensweise
 Ausgehend von unten stehender Aufgabenstellung beschreibe ich hier kurz wie ich zum Lösen der gestellten Aufgabe vorgegangen bin. 
 
-Weil mir die Syntax des `Svelte`-Frameworks zusagte und ich die auf [Svelte](https://svelte.dev) beschriebenen Konzepte einleuchtend fand, habe ich mich dazu entschieden die Aufgabe mit diesem anzufertigen. Zum Start habe ich ein einfaches Template für eine `Svelt`-Seite verwendet. Zur besseren Nachvollziehbarkeit, hier der dafür verwendete Command.
+Weil mir die Syntax des `Svelte`-Frameworks zusagte und ich die auf [Svelte](https://svelte.dev) beschriebenen Konzepte einleuchtend fand, habe ich mich dazu entschieden die Aufgabe mit diesem anzufertigen. Zum Start habe ich ein einfaches Template für eine `Svelte`-Seite verwendet. Zur besseren Nachvollziehbarkeit, hier der dafür verwendete Command.
 
 ```bash
 # Create project from template
@@ -49,12 +49,12 @@ npm create vite@latest
 
 ### Modell
 #### Grundgerüst
-Das Fundament des Datenmodells bildet eine `TypeScript` Schnittstelle (Interface) namens `ITask`. Dies beschreibt die Attribute, die ein Task besitzen kann, d.h. eine eindeutige Identifikationsnummer `id` , eine Beschreibung des zu erledigenden Tasks `todo`, und den binären Bearbeitungsstatus des Tasks `done`. Jede `Task` Komponente hat damit den Datentypen `ITask`. Über die Dateninhalte hinaus besteht eine `Task` Komponente aus einem **HTML** `input`-Element des Typs `checkbox`, dem dazugehörigen `label`, und einem `button` zum Löschen einess bestimmten `Tasks`. Erstellte `Tasks` werden intern als `ITask[]` Liste in einer `TaskList` Komponente zusammengefasst und gemeinsam graphisch dargestellt.
+Das Fundament des Datenmodells bildet eine `TypeScript` Schnittstelle (Interface) namens `ITask`. Dies beschreibt die Attribute, die ein Task besitzen kann, d.h. eine eindeutige Identifikationsnummer `id` , eine Beschreibung des zu erledigenden Tasks `todo`, und den binären Bearbeitungsstatus des Tasks `done`. Jede `Task` Komponente hat damit den Datentypen `ITask`. Über die Dateninhalte hinaus besteht eine `Task` Komponente aus einem HTML `input`-Element des Typs `checkbox`, dem dazugehörigen `label`, und einem `button` zum Löschen eines bestimmten `Tasks`. Erstellte `Tasks` werden intern als `ITask[]` Liste in einer `TaskList` Komponente zusammengefasst und gemeinsam graphisch dargestellt.
 
-Final angezigt wird die `TaskList` Komponente dann erst in der Hauptansicht der Seite in `App.svelte`.
+Final angezeigt wird die `TaskList` Komponente dann erst in der Hauptansicht der Seite über `App.svelte`.
 
 #### Datenspeicherung
-Damit die Seite auf Veränderungen in der Nutzeroberfläche reagieren kann, wird ein schreibares `ITask[]` Objekt in `store.ts` erstellt, das sowohol `Task.svelte` als auch `TaskList.svelte` abonnieren, und damit lesen und beschreiben können.
+Damit die Seite auf Veränderungen in der Nutzeroberfläche reagieren kann, wird ein schreibbares `ITask[]` Objekt in `store.ts` erstellt, das sowohl `Task.svelte` als auch `TaskList.svelte` abonnieren, und damit lesen und beschreiben können.
 Hierfür verwendet die Anwendung das Konzept der `stores`, das `Svelte` zur Verfügung stellt, um Veränderungen sobald sie auftreten an Abonnenten zu kommunizieren. Ebenfalls abonniert wird dieses Objekt von `store.ts` damit es jegliche Veränderungen in den lokalen Speicher (`localStorage`) schreiben kann. Hierbei wird immer eine Liste `ITask[]` im lokalen Speicher abgelegt.
 
 <img src='./CCTaskModel.excalidraw.svg'>
